@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio1">
+  <ClassDiagramComponents>
+    <Class name="ejerc1" package="ejercicio1" visibility="public" xPosition="514.0" yPosition="25.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="ejercicio1.entidades" visibility="public" xPosition="44.0" yPosition="156.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="sexo" type="String" visibility="private"/>
+        <Field name="peso" type="Double" visibility="private"/>
+        <Field name="altura" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="Double" name="peso"/>
+          <Argument type="Double" name="altura"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getSexo" returnType="String" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="String" name="sexo"/>
+        </Method>
+        <Method name="getPeso" returnType="Double" visibility="public"/>
+        <Method name="setPeso" returnType="void" visibility="public">
+          <Argument type="Double" name="peso"/>
+        </Method>
+        <Method name="getAltura" returnType="Double" visibility="public"/>
+        <Method name="setAltura" returnType="void" visibility="public">
+          <Argument type="Double" name="altura"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="personaServicio" package="ejercicio1.Servicio" visibility="public" xPosition="801.0" yPosition="225.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="persona" type="Persona" visibility="package"/>
+        <Field name="imc" type="int" visibility="package"/>
+        <Field name="speso" type="int" visibility="package"/>
+        <Field name="contMayor" type="int" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPersona" returnType="void" visibility="public"/>
+        <Method name="calcularIMC" returnType="int" visibility="public">
+          <Argument type="Persona" name="p"/>
+        </Method>
+        <Method name="esMayorDeEdad" returnType="boolean" visibility="public">
+          <Argument type="Persona" name="p"/>
+        </Method>
+        <Method name="Resultados" returnType="void" visibility="public">
+          <Argument type="int" name="cantPersonas"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ejercicio1.Servicio.personaServicio" target="ejercicio1.entidades.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="persona" source="ejercicio1.Servicio.personaServicio" target="ejercicio1.entidades.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

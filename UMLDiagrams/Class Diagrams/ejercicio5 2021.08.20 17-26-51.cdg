@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio5">
+  <ClassDiagramComponents>
+    <Class name="comparadores5" package="ejercicio5.comparadores" visibility="public" xPosition="51.0" yPosition="464.0">
+      <Fields>
+        <Field name="porAlfabetoInverso" type="Comparator&lt;Paises&gt;" visibility="public" isStatic="true"/>
+        <Field name="porAlfabeto" type="Comparator&lt;Paises&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ejerc5" package="ejercicio5" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Paises" package="ejercicio5.entidades" visibility="public" xPosition="112.0" yPosition="122.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="pais" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="pais"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPais" returnType="String" visibility="public"/>
+        <Method name="setPais" returnType="void" visibility="public">
+          <Argument type="String" name="pais"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PaisesServicio" package="ejercicio5.servicio" visibility="public" xPosition="606.0" yPosition="103.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+        <Field name="paises" type="ArrayList&lt;Paises&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="CrearPaises" returnType="void" visibility="public"/>
+        <Method name="mostrarPaises" returnType="void" visibility="public"/>
+        <Method name="cantidadPaises" returnType="void" visibility="public"/>
+        <Method name="OrdenAlfabetico" returnType="void" visibility="public"/>
+        <Method name="OrdenAlfabeticoInverso" returnType="void" visibility="public"/>
+        <Method name="RetirarPais" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="porAlfabetoInverso" source="ejercicio5.comparadores.comparadores5" target="ejercicio5.entidades.Paises" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="paises" source="ejercicio5.servicio.PaisesServicio" target="ejercicio5.entidades.Paises" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Paises&gt;"/>
+    <HasRelation name="porAlfabeto" source="ejercicio5.comparadores.comparadores5" target="ejercicio5.entidades.Paises" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

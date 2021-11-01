@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio3">
+  <ClassDiagramComponents>
+    <Class name="ejerc3" package="ejercicio3" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Alumno" package="ejercicio3.entidades" visibility="public" xPosition="49.0" yPosition="137.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="nota1" type="Integer" visibility="private"/>
+        <Field name="nota2" type="Integer" visibility="private"/>
+        <Field name="nota3" type="Integer" visibility="private"/>
+        <Field name="compararNombresAscendente" type="Comparator&lt;Alumno&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="Integer" name="nota1"/>
+          <Argument type="Integer" name="nota2"/>
+          <Argument type="Integer" name="nota3"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getNota1" returnType="Integer" visibility="public"/>
+        <Method name="setNota1" returnType="void" visibility="public">
+          <Argument type="Integer" name="nota1"/>
+        </Method>
+        <Method name="getNota2" returnType="Integer" visibility="public"/>
+        <Method name="setNota2" returnType="void" visibility="public">
+          <Argument type="Integer" name="nota2"/>
+        </Method>
+        <Method name="getNota3" returnType="Integer" visibility="public"/>
+        <Method name="setNota3" returnType="void" visibility="public">
+          <Argument type="Integer" name="nota3"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AlumnoServicio" package="ejercicio3.servicio" visibility="public" xPosition="629.0" yPosition="137.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+        <Field name="alumno" type="ArrayList&lt;Alumno&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="crearAlumno" returnType="void" visibility="public"/>
+        <Method name="mostrarLista" returnType="void" visibility="public"/>
+        <Method name="notaFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="alumno" source="ejercicio3.servicio.AlumnoServicio" target="ejercicio3.entidades.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Alumno&gt;"/>
+    <HasRelation name="compararNombresAscendente" source="ejercicio3.entidades.Alumno" target="ejercicio3.entidades.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

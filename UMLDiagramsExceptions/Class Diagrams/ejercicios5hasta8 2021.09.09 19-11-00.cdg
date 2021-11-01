@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicios5hasta8">
+  <ClassDiagramComponents>
+    <Class name="Dos" package="ejercicios5hasta8" visibility="public" xPosition="345.0" yPosition="221.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="metodo" returnType="int" visibility="private" isStatic="true"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ejercicios5a8" package="ejercicios5hasta8" visibility="public" xPosition="371.0" yPosition="31.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tres" package="ejercicios5hasta8" visibility="public" xPosition="629.0" yPosition="221.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="metodo" returnType="int" visibility="private" isStatic="true"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Uno" package="" visibility="public" xPosition="37.0" yPosition="230.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="metodo" returnType="int" visibility="private" isStatic="true"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

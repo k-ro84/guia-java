@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio2">
+  <ClassDiagramComponents>
+    <Class name="ejerc2" package="ejercicio2" visibility="public" xPosition="372.0" yPosition="21.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="ejercicio2.entidades" visibility="public" xPosition="20.0" yPosition="159.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="mojado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="disparar" returnType="void" visibility="public">
+          <Argument type="RevolverDeAgua" name="r"/>
+        </Method>
+        <Method name="ismojado" returnType="boolean" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RevolverDeAgua" package="ejercicio2.entidades" visibility="public" xPosition="661.0" yPosition="150.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="posicionActual" type="int" visibility="private"/>
+        <Field name="posicionDelTambor" type="int" visibility="public"/>
+        <Field name="disparar" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="posicionActual"/>
+          <Argument type="int" name="posicionDelTambor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPosicionActual" returnType="int" visibility="public"/>
+        <Method name="setPosicionActual" returnType="void" visibility="public">
+          <Argument type="int" name="posicionActual"/>
+        </Method>
+        <Method name="getPosicionDelTambor" returnType="int" visibility="public"/>
+        <Method name="setPosicionDelTambor" returnType="void" visibility="public">
+          <Argument type="int" name="posicionDelTambor"/>
+        </Method>
+        <Method name="disparar" returnType="boolean" visibility="public"/>
+        <Method name="siguienteChorro" returnType="void" visibility="public"/>
+        <Method name="generaNumeroAleatorio" returnType="int" visibility="public" isStatic="true">
+          <Argument type="int" name="minimo"/>
+          <Argument type="int" name="maximo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="JuegoServicio" package="ejercicio2.servicio" visibility="public" xPosition="366.0" yPosition="355.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+        <Field name="jugadores" type="ArrayList&lt;Jugador&gt;" visibility="package"/>
+        <Field name="r" type="RevolverDeAgua" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="llenarJuego" returnType="void" visibility="public"/>
+        <Method name="mostrarJugadores" returnType="void" visibility="public"/>
+        <Method name="tamanioPlanilla" returnType="void" visibility="public"/>
+        <Method name="ronda" returnType="void" visibility="public"/>
+        <Method name="muestraJugadores" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="r" source="ejercicio2.servicio.JuegoServicio" target="ejercicio2.entidades.RevolverDeAgua" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejercicio2.entidades.Jugador" target="ejercicio2.entidades.RevolverDeAgua" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="jugadores" source="ejercicio2.servicio.JuegoServicio" target="ejercicio2.entidades.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jugador&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

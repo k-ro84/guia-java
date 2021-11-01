@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio1B">
+  <ClassDiagramComponents>
+    <Class name="ejerc1B" package="ejercicio1B" visibility="public" xPosition="423.0" yPosition="2.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="ejercicio1B.entidades" visibility="public" xPosition="-31.0" yPosition="314.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="raza" type="Raza" visibility="private"/>
+        <Field name="tam" type="Tamanio" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="Raza" name="raza"/>
+          <Argument type="Tamanio" name="tam"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLeer" returnType="Scanner" visibility="public"/>
+        <Method name="setLeer" returnType="void" visibility="public">
+          <Argument type="Scanner" name="leer"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getRaza" returnType="Raza" visibility="public"/>
+        <Method name="setRaza" returnType="void" visibility="public">
+          <Argument type="Raza" name="raza"/>
+        </Method>
+        <Method name="getTam" returnType="Tamanio" visibility="public"/>
+        <Method name="setTam" returnType="void" visibility="public">
+          <Argument type="Tamanio" name="tam"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="ejercicio1B.entidades" visibility="public" xPosition="681.0" yPosition="208.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="anios" type="int" visibility="private"/>
+        <Field name="dni" type="long" visibility="private"/>
+        <Field name="can" type="Perro" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="anios"/>
+          <Argument type="long" name="dni"/>
+          <Argument type="Perro" name="can"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getAnios" returnType="int" visibility="public"/>
+        <Method name="setAnios" returnType="void" visibility="public">
+          <Argument type="int" name="anios"/>
+        </Method>
+        <Method name="getDni" returnType="long" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="long" name="dni"/>
+        </Method>
+        <Method name="getCan" returnType="Perro" visibility="public"/>
+        <Method name="setCan" returnType="void" visibility="public">
+          <Argument type="Perro" name="can"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AdopcionServicio" package="ejercicio1B.servicio" visibility="public" xPosition="415.0" yPosition="158.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+        <Field name="p" type="Persona" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="buscarPerro" returnType="void" visibility="public">
+          <Argument type="Perro" name="choco"/>
+        </Method>
+        <Method name="crearPersona" returnType="void" visibility="public"/>
+        <Method name="mostrarpersona" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Raza" package="ejercicio1B.enumeraciones" visibility="public" xPosition="103.0" yPosition="818.0">
+      <Literals>
+        <Literal name="mastin"/>
+        <Literal name="labrador"/>
+        <Literal name="mestizo"/>
+        <Literal name="galgo"/>
+        <Literal name="pitbull"/>
+        <Literal name="cocker"/>
+        <Literal name="pastor"/>
+      </Literals>
+    </Enum>
+    <Enum name="Tamanio" package="ejercicio1B.enumeraciones" visibility="public" xPosition="415.0" yPosition="818.0">
+      <Literals>
+        <Literal name="gigante"/>
+        <Literal name="grande"/>
+        <Literal name="mediano"/>
+        <Literal name="pequenio"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ejercicio1B.entidades.Persona" target="ejercicio1B.entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejercicio1B.servicio.AdopcionServicio" target="ejercicio1B.entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="p" source="ejercicio1B.servicio.AdopcionServicio" target="ejercicio1B.entidades.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="raza" source="ejercicio1B.entidades.Perro" target="ejercicio1B.enumeraciones.Raza" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejercicio1B.entidades.Perro" target="ejercicio1B.enumeraciones.Raza" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejercicio1B.entidades.Perro" target="ejercicio1B.enumeraciones.Tamanio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tam" source="ejercicio1B.entidades.Perro" target="ejercicio1B.enumeraciones.Tamanio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="can" source="ejercicio1B.entidades.Persona" target="ejercicio1B.entidades.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

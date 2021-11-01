@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio2">
+  <ClassDiagramComponents>
+    <Class name="ejerc2" package="ejercicio2" visibility="public" xPosition="479.0" yPosition="18.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="ejercicio2.entidades" visibility="public" xPosition="767.0" yPosition="181.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RevolverDeAgua" package="ejercicio2.entidades" visibility="public" xPosition="36.0" yPosition="168.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="posicionActual" type="int" visibility="private"/>
+        <Field name="posicionDelTambor" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="posicionActual"/>
+          <Argument type="int" name="posicionDelTambor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPosicionActual" returnType="int" visibility="public"/>
+        <Method name="setPosicionActual" returnType="void" visibility="public">
+          <Argument type="int" name="posicionActual"/>
+        </Method>
+        <Method name="getPosicionDelTambor" returnType="int" visibility="public"/>
+        <Method name="setPosicionDelTambor" returnType="void" visibility="public">
+          <Argument type="int" name="posicionDelTambor"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="JuegoServicio" package="ejercicio2.servicio" visibility="public" xPosition="479.0" yPosition="353.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+        <Field name="jugadores" type="ArrayList&lt;Jugador&gt;" visibility="package"/>
+        <Field name="r" type="RevolverDeAgua" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="llenarJuego" returnType="void" visibility="public"/>
+        <Method name="mostrarJugadores" returnType="void" visibility="public"/>
+        <Method name="tamanioPlanilla" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="r" source="ejercicio2.servicio.JuegoServicio" target="ejercicio2.entidades.RevolverDeAgua" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="jugadores" source="ejercicio2.servicio.JuegoServicio" target="ejercicio2.entidades.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jugador&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

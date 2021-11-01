@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio6">
+  <ClassDiagramComponents>
+    <Class name="comparadores6" package="ejercicio6.comparadores" visibility="public" xPosition="771.0" yPosition="284.0">
+      <Fields>
+        <Field name="productos" type="Comparator&lt;Tienda&gt;" visibility="public" isStatic="true"/>
+        <Field name="codigos" type="Comparator&lt;Tienda&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ejerc6" package="ejercicio6" visibility="public" xPosition="423.0" yPosition="23.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tienda" package="ejercicio6.entidades" visibility="public" xPosition="345.0" yPosition="179.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="codigo" type="Integer" visibility="private"/>
+        <Field name="producto" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="codigo"/>
+          <Argument type="String" name="producto"/>
+          <Argument type="double" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="Integer" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="Integer" name="codigo"/>
+        </Method>
+        <Method name="getProducto" returnType="String" visibility="public"/>
+        <Method name="setProducto" returnType="void" visibility="public">
+          <Argument type="String" name="producto"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TiendaServicio" package="ejercicio6.servicio" visibility="public" xPosition="6.0" yPosition="208.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+        <Field name="mapaTienda" type="HashMap&lt;Integer, Tienda&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="ingresoListado" returnType="void" visibility="public"/>
+        <Method name="mostrarProductos" returnType="void" visibility="public"/>
+        <Method name="productosEnstock" returnType="void" visibility="public"/>
+        <Method name="buscarEliminar" returnType="void" visibility="public"/>
+        <Method name="modificar" returnType="void" visibility="public"/>
+        <Method name="OrdenProductos" returnType="void" visibility="public"/>
+        <Method name="codigos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="mapaTienda" source="ejercicio6.servicio.TiendaServicio" target="ejercicio6.entidades.Tienda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Integer, Tienda&gt;"/>
+    <HasRelation name="productos" source="ejercicio6.comparadores.comparadores6" target="ejercicio6.entidades.Tienda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="codigos" source="ejercicio6.comparadores.comparadores6" target="ejercicio6.entidades.Tienda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,44 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejercicio5_E.entidades;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author K-RITO
+ */
+public class Mes {
+    Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        private String[] meses;
+        private String [] mesSecreto;
+
+    public Mes() {
+    }
+
+    public Mes(String[] meses, String[] mesSecreto) {
+        this.meses = meses;
+        this.mesSecreto = mesSecreto;
+    }
+
+    public String[] getMeses() {
+        return meses;
+    }
+
+    public void setMeses(String[] meses) {
+        this.meses = meses;
+    }
+
+    public String[] getMesSecreto() {
+        return mesSecreto;
+    }
+
+    public void setMesSecreto(String[] mesSecreto) {
+        this.mesSecreto = mesSecreto;
+    }
+        
+        
+}

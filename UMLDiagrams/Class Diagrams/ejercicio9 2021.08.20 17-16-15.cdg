@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio9">
+  <ClassDiagramComponents>
+    <Class name="ejerc9" package="ejercicio9" visibility="public" xPosition="441.0" yPosition="65.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Matematica" package="ejercicio9.entidades" visibility="public" xPosition="104.0" yPosition="248.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="num1" type="double" visibility="private"/>
+        <Field name="num2" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="num1"/>
+          <Argument type="double" name="num2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNum1" returnType="double" visibility="public"/>
+        <Method name="setNum1" returnType="void" visibility="public">
+          <Argument type="double" name="num1"/>
+        </Method>
+        <Method name="getNum2" returnType="double" visibility="public"/>
+        <Method name="setNum2" returnType="void" visibility="public">
+          <Argument type="double" name="num2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="matematicaServicio" package="ejercicio9.servicio" visibility="public" xPosition="634.0" yPosition="277.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="matematica" type="Matematica" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="num1"/>
+          <Argument type="double" name="num2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="devolverMayor" returnType="int" visibility="public"/>
+        <Method name="calcularPotencia" returnType="int" visibility="public"/>
+        <Method name="calcularRaiz" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="matematica" source="ejercicio9.servicio.matematicaServicio" target="ejercicio9.entidades.Matematica" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
